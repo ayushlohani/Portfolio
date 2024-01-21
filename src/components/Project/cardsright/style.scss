@@ -1,0 +1,112 @@
+$orange-color:#e87e32c3;
+.cardr{
+    width: 70%;
+    margin: 20px;
+    background-color:#f38f48ef;
+    color: black;
+    border-radius: 5px;
+    height: 25%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    transition: all 1s ease;
+    .pic{
+        width: 40%;
+        //background-color: aquamarine;
+        height: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .pic:hover{
+        cursor: pointer;
+        transition: all 1s ease;
+    }
+    .write{
+        overflow: hidden;
+        width: 60%;
+        height:90%;
+        padding:0px 50px;
+        .project-head{
+            font-size: x-large;
+            padding: 20px;
+            font-weight: 600;
+        }
+        .project-info{
+            opacity: 0.7;
+            font-weight: 600;
+            overflow: hidden;
+            height: 45%;
+        }
+        .tech{
+            //background-color: aqua;
+            height: 40%;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            span{
+                background-color: $orange-color;
+                color: white;
+                padding: 10px;
+                border-radius: 18px;
+            }
+        }
+    }
+}
+.cardr:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition: all 1s ease;
+}
+@media screen and (max-width:1000px) {
+    .cardr{
+        height: 23%;
+        width: 80%;
+        .write{
+            .project-info{
+                height: 60%;
+            }
+            .tech{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:700px) {
+    .cardr{
+        flex-direction: column;
+        height: 50vh;
+        width: 60%;
+        .pic{
+            width: 100%;
+            height: 50%;
+        }
+        .write{
+            width: 100%;
+            height: 50%;
+            padding: 0px 10px;
+            .project-head{
+                width: 100%;
+            }
+            .tech{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:1000px) {
+    .cardr{
+        .write{
+            .tech{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .cardr{
+        width: 80%;
+        font-size: small;
+    }
+}

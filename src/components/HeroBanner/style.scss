@@ -1,0 +1,173 @@
+$orange-color:#ff6a00e6;
+.HeroBanner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-top: 70px;
+    //color: white;
+    //background-color: #161616;
+    .left-sec{
+        width: 70%;
+        height: 100%;
+        //background-color: rgba(32, 150, 241, 0.679);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        //opacity: 0;
+        .head{
+            font-size: 50px;
+            font-weight: 700;
+            .name{
+                font-weight: 800;
+                color: $orange-color;
+            }
+        }
+        p{
+            margin-top: 20px;
+            padding:10px 20px;
+            font-size: larger;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .buttons{
+            margin-top: 40px;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            a{
+                width: 100%;
+                button{
+                    height: 40px;
+                    width: 90%;
+                    padding: 10px;
+                    margin-right: 10px;
+                    font-size: 100%;
+                    border-radius: 25px;
+                    border: 1px solid black;
+                    background-color: white;
+                }
+                button:hover{
+                    cursor: pointer;
+                    background-color: rgb(0, 0, 0);
+                    color: rgb(255, 255, 255);
+                    //transition: all 0.1s ease;
+    
+                }
+            }
+
+            .active{
+                background-color: $orange-color;
+                color: white;
+                border: none;
+                font-weight: 500;
+            }
+            
+        }
+
+    }
+    .right-sec{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        //left: 60%;
+        //background-color: aqua;
+        transition-timing-function: ease;
+        .pic{
+            width: 40%;
+            height: 60%;
+            position: absolute;
+            top:20%;
+            //background-color: antiquewhite;
+            img{
+                height: 100%;
+                width: 100%;
+                //object-fit: contain;      
+                //animation: anim 10s infinite alternate;
+                filter: contrast(130%) brightness(110%);
+                filter: drop-shadow(20px 0px 5px white);
+            }
+        }
+        .pic:hover{
+            cursor: pointer;
+        }
+    }
+    
+}
+@media screen and (max-width:750px) {
+    .HeroBanner{
+        width: 100%;
+        flex-direction: column;
+        .left-sec{
+            position: static;
+            width: 100%;
+            height: 150%;
+            z-index: 2;
+            .head{
+                font-size: 35px;
+                margin-left: 0%;
+            }
+            p{
+                font-size: medium;
+            }
+            .buttons{
+                height: 40%;
+                width: 70%;
+                margin-top: 0%;
+            }
+        }
+        .right-sec{
+            position: static;
+            .pic{
+                width: 100%;
+                height: 70%;
+                position: absolute;
+                padding-right:100px;
+                margin-bottom: 20%;
+                top:23%;
+                //background-color: antiquewhite;
+                img{
+                    height: 80%;
+                    margin-top: 20%;
+                    margin-left: 10%;
+                    width: 100%;
+                    object-fit: contain;      
+                    //animation: anim 10s infinite alternate;
+                    filter: contrast(130%) brightness(110%);
+                    filter: drop-shadow(20px 0px 5px white);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:500px) {
+    .HeroBanner{
+        width: 100%;
+        flex-direction: column;
+        .left-sec{
+            p{
+                margin-left: 10px;
+                font-size: small;
+                
+            }
+            .buttons{
+                flex-direction: column;
+                height: 30%;
+                margin-top: 10%;
+                justify-content: space-around;
+            }
+        }
+        .right-sec{
+            .pic{
+                width: 110%;
+                margin-top: 50px;
+            }
+        }
+    }
+}

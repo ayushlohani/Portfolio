@@ -1,0 +1,40 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.cursor {
+  position: absolute;
+  cursor:none;
+  z-index: -1;
+  background-color:rgba(85, 250, 8, 0);
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  filter: blur(20px);
+}
+body{
+   font-family:sans-serif;
+  
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+.scroll-page{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 100vh;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pro-con{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
