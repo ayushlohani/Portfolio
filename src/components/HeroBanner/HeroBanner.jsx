@@ -66,7 +66,7 @@ const HeroBanner = () => {
         </p>
         <div className="buttons">
           <a
-            href="https://drive.google.com/file/d/1FGGqJurN-Hi1jYW_hdykc_AeVVoKzrKL/view?usp=drive_link"
+            href="https://drive.google.com/file/d/129QapKWTKmvwxJzzKye6MEKU8RAlByec/view?usp=drive_link"
             target="_blank"
           >
             <button className="butn active">Download CV</button>
